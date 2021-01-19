@@ -3,7 +3,7 @@ const Helpers = require("../../../helpers/helpers");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const secret = process.env.PUBLIC_ACCESS_TOKEN_SECRET;
+const secret = process.env.JWTSECRET;
 //helpers.js tests suite
 describe("helpers test", () => {
   //mock user

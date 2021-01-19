@@ -11,14 +11,9 @@ const hashPassword = async (password) => {
 
 //generate token
 const genJwt = async (payload) => {
-  const token = await jwt.sign(
-    payload,
-    process.env.PRIVATE_ACCESS_TOKEN_SECRET,
-    {
-      algorithm: "RS256",
-      expiresIn: "24h",
-    }
-  );
+  const token = await jwt.sign(payload, process.env.JWTSECRET, {
+    expiresIn: "24h",
+  });
   return token;
 };
 
