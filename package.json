@@ -14,7 +14,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jest --detectOpenHandles --watchAll"
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
