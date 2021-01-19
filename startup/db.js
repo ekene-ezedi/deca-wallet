@@ -7,6 +7,8 @@ module.exports = function () {
   let DB = mongoose.connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
   });
   DB.then(() => console.log(`Database connection @ ${db}`)).catch((error) =>
     console.log(error)
