@@ -13,7 +13,8 @@
   "description": "A Simple e-wallet system",
   "main": "app.js",
   "scripts": {
-    "test": "jest --verbose --detectOpenHandles"
+    "start": "node server.js",
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
