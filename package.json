@@ -1,0 +1,41 @@
+{
+  "name": "deca-wallet",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "setupFiles": [
+      "dotenv/config"
+    ]
+  },
+  "version": "1.0.0",
+  "description": "A Simple e-wallet system",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose --detectOpenHandles",
+    "test:travis": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekene-ezedi/deca-wallet.git"
+  },
+  "author": "Ekene Chris Ezedi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekene-ezedi/deca-wallet/issues"
+  },
+  "homepage": "https://github.com/ekene-ezedi/deca-wallet#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.11"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1"
+  }
+}
