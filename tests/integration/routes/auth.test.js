@@ -17,11 +17,13 @@ describe("AUTHENTICATION ROUTE", () => {
     await mongoose.connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
     });
   });
 
   afterEach(async () => {
-    await Noob.remove({});
+    await Noob.deleteOne();
   });
 
   describe("POST/signup", () => {
