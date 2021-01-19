@@ -1,4 +1,5 @@
 const supertest = require("supertest");
+const mongoose = require("mongoose");
 const app = require("../../../app");
 const request = supertest(app);
 const Noob = require("../../../models/noob");
@@ -11,9 +12,18 @@ let data = {
 };
 
 describe("AUTHENTICATION ROUTE", () => {
+  beforeAll(async () => {
+    const url = `mongodb://127.0.0.1/deca-wallet_test`;
+    await mongoose.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+  });
+
   afterEach(async () => {
     await Noob.remove({});
   });
+
   describe("POST/signup", () => {
     it("Should return status 400, if user validation fails", async (done) => {
       const response = await request.post("/api/auth/signup").send(data);
