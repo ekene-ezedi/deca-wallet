@@ -11,4 +11,4 @@ branches:
   only:
     - /^(?i:feature)/.*$/
 script:
-  - npm run test:travis
+  - npm run test
