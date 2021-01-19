@@ -26,6 +26,11 @@ describe("AUTHENTICATION ROUTE", () => {
     await Noob.deleteOne();
   });
 
+  afterAll((done) => {
+    mongoose.connection.close();
+    done();
+  });
+
   describe("POST/signup", () => {
     it("Should return status 400, if user validation fails", async (done) => {
       const response = await request.post("/api/auth/signup").send(data);
