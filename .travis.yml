@@ -13,6 +13,6 @@ branches:
 script:
   - npm run test
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" != "master" ]; then ./scripts/feature.sh; else  ./scripts/master.sh; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" != "master" ]; then bash ./scripts/feature.sh; else bash ./scripts/master.sh; fi'
 notifications:
   email: false
