@@ -7,9 +7,7 @@ cache:
     - "node_modules"
 env:
   - DB="mongodb://127.0.0.1/deca-wallet_test"
-branches:
-  only:
-    - /^(?i:feature)/.*$/
+
 script:
   - npm run test
 after_success:
