@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - node
+services: mongodb
+cache:
+  directories:
+    - "node_modules"
+env:
+  - DB="mongodb://127.0.0.1/deca-wallet_test"
+branches:
+  only:
+    - /^(?i:feature)/.*$/
+script:
+  - npm run test
+after_success:
+  - 'if "$TRAVIS_BRANCH" == "master"; npm run coverage fi'
+notifications:
+  email: false
