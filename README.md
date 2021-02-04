@@ -1,2 +1,3 @@
 # deca-wallet
-A simple e-wallet system
+
+A simple digital-wallet system
