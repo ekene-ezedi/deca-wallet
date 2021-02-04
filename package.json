@@ -13,7 +13,7 @@
   "description": "A Simple e-wallet system",
   "main": "app.js",
   "scripts": {
-    "test": "jest --watchAll --verbose --detectOpenHandles",
+    "test": "jest",
     "coverage": "npm run pretest && jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
