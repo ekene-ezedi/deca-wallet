@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "coverage": "npm run pretest && jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "jest --coverage && jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "mongoose": "^5.11.11"
   },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "jest": "^26.6.3",
     "supertest": "^6.0.1"
   }
