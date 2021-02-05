@@ -11,6 +11,8 @@ env:
 script:
   - npm run test
 after_success:
-  - 'if [ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]; then npm run coverage fi'
+  - |
+    if [ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]; then 
+    npm run coverage fi
 notifications:
   email: false
