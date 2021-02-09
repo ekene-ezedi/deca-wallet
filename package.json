@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "coverage": "jest --coverage && jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
