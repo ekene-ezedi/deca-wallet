@@ -8,7 +8,7 @@ router.post("/signup", async (req, res) => {
   //validate request
   const validate = Noob.validateUser(req.body);
 
-  //if validation fails return 404 error
+  //if validation fails return 400 error
   if (validate.error)
     return res.status(400).json({ error: validate.error.details[0].message });
 
